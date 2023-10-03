@@ -3,8 +3,8 @@ export default function getListStudentIds(array) {
     return [];
   }
   const ids = array.map((student) => {
-    const obj = JSON.parse(JSON.stringify(student));
-    return obj.id;
+    //const obj = JSON.parse(JSON.stringify(student));
+    return student.id;
   });
   return ids;
 }
