@@ -1,9 +1,9 @@
 export default function getStudentsByLocation(students, location) {
-  const studentsByLocation = [];
-  for (const student of students) {
+  const studentsByLocation = students.filter((student) => {
+    student = JSON.parse(JSON.stringify(student))
     if (student.location === location) {
-      studentsByLocation.push(student);
+      return student
     }
-  }
+  })
   return studentsByLocation;
 }
