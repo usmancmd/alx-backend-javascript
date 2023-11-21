@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function countStudents (path) {
+const countStudents = (path) => {
   const students = {};
   const fields = {};
   let fileLength = 0;
@@ -39,6 +39,6 @@ function countStudents (path) {
   } catch (e) {
     throw new Error('Cannot load the database');
   }
-}
+};
 
 module.exports = countStudents;
