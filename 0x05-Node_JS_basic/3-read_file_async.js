@@ -10,7 +10,7 @@ function countStudents (path) {
       if (error) {
         reject(Error('Cannot load the database'));
       } else {
-        const lines = content.toString().split('\r\n');
+        const lines = content.toString().split('\n');
 
         for (let i = 0; i < lines.length; i++) {
           if (lines[i].trim() !== '') {
