@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function countStudents (path) {
+function countStudents(path) {
   const students = {};
   const fields = {};
   let fileLength = 0;
@@ -12,7 +12,7 @@ function countStudents (path) {
       } else {
         const lines = content.toString().split('\n');
 
-        for (let i = 0; i < lines.length; i++) {
+        for (let i = 0; i < lines.length; i += 1) {
           if (lines[i].trim() !== '') {
             fileLength += 1;
             const field = lines[i].split(',');
