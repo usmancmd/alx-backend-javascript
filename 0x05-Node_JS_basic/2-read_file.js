@@ -7,7 +7,7 @@ const countStudents = (path) => {
 
   try {
     const content = fs.readFileSync(path, 'utf-8');
-    const lines = content.split('\r\n');
+    const lines = content.split('\n');
 
     for (let i = 0; i < lines.length; i += 1) {
       if (lines[i].trim() !== '') {
