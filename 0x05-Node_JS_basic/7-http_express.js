@@ -2,7 +2,7 @@ const { readFile } = require('fs');
 const express = require('express');
 
 const app = express();
-function countStudents (path) {
+function countStudents(path) {
   const students = {};
   const fields = {};
   let fileLength = 0;
@@ -12,8 +12,8 @@ function countStudents (path) {
         reject(err);
       } else {
         let output = '';
-        const lines = content.toString().split('\r\n');
-        for (let i = 0; i < lines.length; i++) {
+        const lines = content.toString().split('\n');
+        for (let i = 0; i < lines.length; i += 1) {
           if (lines[i].trim() !== '') {
             fileLength += 1;
             const field = lines[i].split(',');
