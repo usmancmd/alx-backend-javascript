@@ -1,5 +1,4 @@
-const readDatabase = require('../utils')
-
+const readDatabase = require('../utils');
 
 class StudentsController {
   static getAllStudents(request, response) {
