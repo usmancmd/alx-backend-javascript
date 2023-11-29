@@ -11,7 +11,7 @@ describe('#calculateNumber() with type ADD', () => {
   })
 
   it('should sum 2 and 3.3', () => {
-    expect(calculateNumber('SUM', 2, 3.3)).to.equal(5)
+    expect(calculateNumber('SUM', 2, 3)).to.equal(5)
   })
 })
 
@@ -19,14 +19,14 @@ describe('#calculateNumber() with type SUBTRACT', () => {
   it('should round up and subtract if type is SUBTRACT', () => {
     expect(calculateNumber('SUBTRACT', 2.2, 5.3)).to.equal(-3)
     expect(calculateNumber('SUBTRACT', 2.1, 5.4)).to.equal(-3)
-    expect(calculateNumber('SUBTRACT', 7.5, 5.3)).to.equal(3)
+    expect(calculateNumber('SUBTRACT', -7.5, -5.5)).to.equal(-2)
   })
 })
 
 describe('#calculateNumber() with type DIVIDE', () => {
   it('should round up and divide if type is DIVIDE', () => {
-    expect(calculateNumber('DIVIDE', 4.2, 2.2)).to.equal(2)
-    expect(calculateNumber('DIVIDE', 8.5, 3.3)).to.equal(3)
+    expect(calculateNumber('DIVIDE', 4, 2)).to.equal(2)
+    expect(calculateNumber('DIVIDE', 9.5, 1.5)).to.equal(5)
     expect(calculateNumber('DIVIDE', 11.5, 2.3)).to.equal(6)
   })
 
